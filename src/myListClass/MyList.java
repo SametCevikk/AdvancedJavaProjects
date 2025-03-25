@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MyList<T> {
 
-    private static int capacity = 10;
+    private int capacity = 10;
 
     private Object[] elements;
     int size;
@@ -57,7 +57,7 @@ public class MyList<T> {
     //Deletes the data at the given index and shifts the data after the deleted index to the left.
     public void remove(int index) {
         if (index >= 0 && index < size) {
-            for (int i = index; i < size; i++) {
+            for (int i = index; i < size-1; i++) {
                 elements[i] = elements[i + 1];
             }
             elements[size - 1] = null;
@@ -126,7 +126,7 @@ public class MyList<T> {
     //Combines the elements in the list into an array in the same order.
     public T[] toArray() {
         T[] array = (T[]) new Object[size];
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size ; i++) {
             array[i] = (T) elements[i];
         }
         return array;
@@ -151,7 +151,7 @@ public class MyList<T> {
         }
         MyList<T> list = new MyList<>();
 
-        for (int i = startIndex; i <= finishIndex; i++) {
+        for (int i = startIndex; i < finishIndex; i++) {
             list.add((T) elements[i]);
 
         }
