@@ -8,7 +8,7 @@ public class CharacterCounter {
         StringBuffer sb = new StringBuffer();
         int counter=1;
         char currentChar=str.charAt(0);
-        for(int i=0;i<str.length();i++){
+        for(int i=1;i<str.length();i++){
             if(currentChar==str.charAt(i)){
                 counter++;
             }else{
