@@ -117,3 +117,63 @@ aaabbccccd
 - Only counts consecutive character repetitions.
 - Case-sensitive: aaAA becomes 2a2A
 
+# SumFromString
+
+**SumFromString** is a Java program that extracts all numbers from a given string and returns their sum. It processes a user-provided text, finds all the numbers within, and calculates their total.
+
+## Features
+
+- Extracts all numbers from the input string.
+- Sums the extracted numbers.
+- Displays the total sum.
+
+## Usage
+
+### Steps
+
+1. When the program is run, the user is prompted to enter a text.
+2. All numbers in the entered text are identified and summed.
+3. The total sum is displayed.
+
+### Example
+
+#### Input:
+- abc123def45gh6
+#### Output:
+- 174
+
+
+### Running the Code
+
+1. Download or clone this repository to your computer.
+2. Open the `SumFromString.java` file in a Java IDE (e.g., IntelliJ IDEA or Eclipse).
+3. Run the program.
+4. You will be prompted to enter a text, and the program will display the sum of all numbers found in the text.
+
+## Code Explanation
+
+### `findNumbers` Method
+
+This method identifies all the numbers in a given string and sums them.
+
+- **Variables:**
+  - `number`: Temporarily stores numbers as they are found.
+  - `sum`: Stores the cumulative sum of all numbers found.
+  - `isNumber`: Tracks whether the current character is part of a number.
+  
+- **Loop:**
+  - Each character in the string is checked.
+  - If the character is a digit (0-9), it is added to `number`.
+  - If the character is not a digit, and a number has been formed, that number is added to `sum`.
+  
+- **Result:**
+  - After processing all characters, the total sum (`sum`) is returned.
+
+### `main` Method
+
+- The program prompts the user for a string input.
+- The input string is passed to the `findNumbers` method, and the result is printed to the console.
+
+
+
+
